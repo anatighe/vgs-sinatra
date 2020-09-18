@@ -37,4 +37,5 @@ get '/secure' do
   request.body = {account_number: 'tok_sandbox_w8CBfH8vyYL2xWSmMWe3Ds', cc_number: 'encryptedno', cc_exp: 'encryptedexp', cvv: 'encryptedcvv'}.to_json
   response = http.request(request)
   puts "Response #{response.code} #{response.message}: #{response.body}"
+  "Thanks, we've retrieved your secure data!"
 end
